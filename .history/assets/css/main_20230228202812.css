@@ -658,16 +658,6 @@ body {
   }
 }
 
-/* Media query para dispositivos móveis com largura de tela menor que 580px */
-@media screen and (max-width: 579px) {
-  /* Ajuste o espaçamento do botão de 3 pontos para ficar mais próximo */
-  .nav__open,
-  .nav__close {
-    margin-right: 1rem;
-  }
-}
-
-
 @media screen and (min-width: 668px) {
   .services__wrapper,
   .portfolio__wrapper {
@@ -675,56 +665,38 @@ body {
   }
 }
 
-/* Mobile navigation */
-@media screen and (max-width: 768px) {
-  .nav__menu {
-    /* Posicione o menu próximo ao ícone de menu */
-    position: fixed;
-    top: var(--header-height); /* Defina a distância do topo de acordo com o tamanho do cabeçalho */
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--bg-darker);
+@media screen and (min-width: 768px) {
+  .home__wrapper,
+  .about__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats {
+    order: initial;
+  }
+
+  .about__body {
+    text-align: initial;
+  }
+
+  .project__body {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.3s ease-in-out;
-    transform: scale(0);
-    opacity: 0;
+    column-gap: 2rem;
+    text-align: initial;
   }
 
-  .nav__menu--open {
-    /* Alinhe o menu próximo ao ícone de menu ao abrir */
-    transform: scale(1);
-    opacity: 1;
+  .project__wrapper {
+    grid-template-columns: 2.5fr 1fr;
   }
 
-  .nav__list {
-    /* Defina o espaçamento do menu para os itens ficarem mais próximos */
-    flex-direction: column;
-    row-gap: 2rem;
+  .testimonial__item {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+    text-align: initial;
   }
 
-  .nav__open,
-  .nav__close {
-    /* Ajuste a posição dos botões para que fiquem mais próximos do ícone de menu */
-    display: block;
-    font-size: 3rem;
-    color: var(--color-white);
-    transition: var(--transition);
-    cursor: pointer;
-    margin-right: 2rem; /* Ajuste o espaçamento entre o ícone e os botões */
-  }
-
-  .nav__close {
-    position: absolute;
-    top: 3rem;
-    right: 3rem;
-  }
-
-  .nav__open:hover,
-  .nav__close:hover {
-    color: var(--color-primary);
+  .contact__list {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

@@ -658,16 +658,6 @@ body {
   }
 }
 
-/* Media query para dispositivos móveis com largura de tela menor que 580px */
-@media screen and (max-width: 579px) {
-  /* Ajuste o espaçamento do botão de 3 pontos para ficar mais próximo */
-  .nav__open,
-  .nav__close {
-    margin-right: 1rem;
-  }
-}
-
-
 @media screen and (min-width: 668px) {
   .services__wrapper,
   .portfolio__wrapper {
