@@ -1,12 +1,12 @@
-/* 1. Variaveis
+/* 1. Variables
 ----------------------------------------------------------------------------
 */
 :root {
-  --bg-light: #807CF9;
-  --bg-dark: #201e59;
+  --bg-light: #333e4d;
+  --bg-dark: #2a3543;
   --bg-darker: #212a36;
-  --color-primary: #8F22E0;
-  --color-primary-dark: #410ea0;
+  --color-primary: #8874ef;
+  --color-primary-dark: #772fed;
   --color-text: #a2acbb;
   --color-white: #fff;
   --shadow: 0px 6px 30px 2px rgba(0, 0, 0, 0.1);
@@ -143,24 +143,9 @@ body {
 }
 .titulo {
   text-align: center;
-  font-size: 50px;
+  font-size: var(--fs-lg);
   margin-bottom: 2rem;
 }	
-
-.descricao{
-  text-align: center;
-  font-size: var(--fs-sm);
-  margin-bottom: 2rem;
-}
-
-.descricao::before {
-  content: "";
-  width: 60px;
-  height: 3px;
-  background-color: #007bff; /* Cor da linha */
-  margin-bottom: 10px;
-}
-
 .btn {
   display: inline-flex;
   align-items: center;
@@ -455,16 +440,14 @@ body {
   box-shadow: var(--shadow);
   border-radius: 0.5rem;
   padding: 2rem;
-  max-width: 600px; /* Ajuste o tamanho máximo do card aqui */
+  max-width: 300px;
   justify-self: center;
-  /* Estilos para o vídeo incorporado */
 }
 
-.portfolio__card iframe {
-  width: 100%;
-  height: 315px; /* Manter a altura do vídeo como 315px */
+.portfolio__image {
+  border-radius: 0.3rem;
+  margin-bottom: 2rem;
 }
-
 
 .portfolio__category {
   font-weight: var(--fw-semibold);
